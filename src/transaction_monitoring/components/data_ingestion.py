@@ -1,25 +1,23 @@
 import os
 import pandas as pd
-from src.transaction_monitoring.config.configuration import Config
-from transaction_monitoring import logger
 
 class DataIngestion:
-    def __init__(self, config: Config):
+    def __init__(self, config):
         self.config = config
-        os.makedirs(self.config.data_ingestion.raw_data_dir, exist_ok=True)
 
-    try:
+    def load_data(self):
+        """Loads data from the configured file path."""
+        if not os.path.exists(self.config.data_ingestion.data_path):
+            raise FileNotFoundError(f"❌ Data file not found at {self.config.data_ingestion.data_path}")
 
-        def load_data(self):
-            df = pd.read_csv(self.config.data_ingestion.data_path)
-            return df
-        logger.info(f"dataset ingested")
+        return pd.read_csv(self.config.data_ingestion.data_path)
 
-        def save_raw_data(self, df):
-            raw_data_path = os.path.join(self.config.data_ingestion.raw_data_dir, "raw_data.csv")
-            df.to_csv(raw_data_path, index=False)
-            return raw_data_path
-        logger.info(f"dataset saved")
-    except Exception as e:
-        logger.error(f"Error in Data Ingestion: {e}")
-        raise e
+    def save_raw_data(self, df):
+        """Ensures directory exists and saves raw data as CSV."""
+        raw_data_dir = self.config.data_ingestion.raw_data_dir
+        os.makedirs(raw_data_dir, exist_ok=True)
+
+        raw_data_path = os.path.join(raw_data_dir, "raw_data.csv")
+        df.to_csv(raw_data_path, index=False)
+        
+        return raw_data_path
