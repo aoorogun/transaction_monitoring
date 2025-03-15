@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: transaction_monitoring
+Version: 0.0.2
+Summary: multimodal TM
+Home-page: https://github.com/aoorogun/transaction_monitoring
+Author: aoorogun
+Author-email: info@oaorgun.co.uk
+Project-URL: Bug Tracker, https://github.com/aoorogun/transaction_monitoring/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
