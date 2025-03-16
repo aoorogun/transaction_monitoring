@@ -1,0 +1,11 @@
+2025-03-15 14:50:26,705 - INFO - 🔍 Attempting to load configuration from: config/config.yaml
+2025-03-15 14:50:26,706 - WARNING - ⚠️ Configuration file not found at config/config.yaml.
+2025-03-15 14:51:00,835 - INFO - 🔍 Attempting to load configuration from: config/config.yaml
+2025-03-15 14:51:00,837 - WARNING - ⚠️ Configuration file not found at config/config.yaml.
+2025-03-15 14:54:21,862 - INFO - 🔍 Attempting to load configuration from: config/config.yaml
+2025-03-15 14:54:21,864 - WARNING - ⚠️ Configuration file not found at config/config.yaml.
+2025-03-15 14:55:13,080 - INFO - 🔍 Attempting to load configuration from: config/config.yaml
+2025-03-15 14:55:13,083 - WARNING - ⚠️ Configuration file not found at config/config.yaml.
+2025-03-15 14:56:56,355 - INFO - 🔍 Attempting to load configuration from: config/config.yaml
+2025-03-15 14:56:56,358 - INFO - ✅ Configuration loaded successfully.
+2025-03-15 14:56:56,358 - INFO - 📂 Data Ingestion Config - Data Path: data/input.csv, Raw Data Dir: data/raw
